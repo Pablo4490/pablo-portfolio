@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex"> <!-- Empêche Google de référencer la page -->
+    <title>Portfolio Technique | Pablo RIBAU</title>
+    <style>
+        :root {
+            --primary-color: #1F3F49; /* Bleu canard/pétrole rappelant ton CV */
+            --secondary-color: #6AB187;
+            --bg-color: #F8F9FA;
+            --text-color: #333333;
+            --card-bg: #FFFFFF;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            background-color: #ccc; /* Remplacement temporaire */
+        }
+
+        h1 { margin-bottom: 0.5rem; font-size: 2.2rem; }
+        h2 { font-weight: 300; font-size: 1.2rem; margin-bottom: 1.5rem; opacity: 0.9; }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin: 0 0.5rem;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .links a:hover { background-color: white; color: var(--primary-color); }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #E9ECEF;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6C757D;
+            font-size: 0.9rem;
+        }
+
+        .card-content { padding: 1.5rem; }
+        .card-content h3 { margin-bottom: 0.5rem; color: var(--primary-color); }
+        .card-content p { font-size: 0.95rem; margin-bottom: 1rem; }
+        
+        .tag-container { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .tag {
+            background-color: #E2E8F0;
+            color: #4A5568;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Remplace src par ton image quand tu l'auras : src="images/profil.jpg" -->
+        <img src="" alt="Photo de Pablo RIBAU" class="profile-img">
+        <h1>Pablo RIBAU</h1>
+        <h2>Élève-ingénieur en Génie Mécanique (ENIT) | Mécanique, CAO & Systèmes Embarqués</h2>
+        <div class="links">
+            <!-- Pense à mettre ton lien LinkedIn ici -->
+            <a href="https://linkedin.com/in/ton-profil" target="_blank">Profil LinkedIn</a>
+            <a href="mailto:pablo@ribau.com">Me contacter</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECTION 1 : MECANIQUE -->
+        <h2 class="section-title">🛠️ Mécanique Pratique & Rénovation</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="" alt="Photo Turbo Volvo" class="card-img" style="font-style: italic;"> <!-- Espace image -->
+                <div class="card-content">
+                    <h3>Intervention Moteur : Volvo V40 1.9D</h3>
+                    <p>Diagnostic et remplacement complet du turbocompresseur Garrett. Révision du système de reniflard d'huile et contrôle de la vanne EGR.</p>
+                    <div class="tag-container">
+                        <span class="tag">Mécanique Auto</span>
+                        <span class="tag">Diagnostic</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="Photo Tableau de bord" class="card-img"> <!-- Espace image -->
+                <div class="card-content">
+                    <h3>Modification Habitacle</h3>
+                    <p>Câblage et intégration sur-mesure de ports de charge USB dans le circuit électrique du tableau de bord. Prototypage d'améliorations ergonomiques.</p>
+                    <div class="tag-container">
+                        <span class="tag">Électricité Auto</span>
+                        <span class="tag">Intégration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2 : CAO & UGV -->
+        <h2 class="section-title">📐 Conception 3D, UGV & Éco-conception</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="" alt="Rendu Bouteille Keune" class="card-img">
+                <div class="card-content">
+                    <h3>Design Produit (Keune)</h3>
+                    <p>Modélisation 3D avancée d'une nouvelle gamme de bouteilles de shampoing. Projet réalisé lors de mon échange aux Pays-Bas.</p>
+                    <div class="tag-container">
+                        <span class="tag">SolidWorks</span>
+                        <span class="tag">Design Industriel</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="Rendu UGV Pyrénées" class="card-img">
+                <div class="card-content">
+                    <h3>Usinage Grande Vitesse (UGV)</h3>
+                    <p>Définition des trajectoires et optimisation des paramètres de coupe (Ap, Ae) pour l'usinage d'un relief topographique des Pyrénées.</p>
+                    <div class="tag-container">
+                        <span class="tag">CATIA V5</span>
+                        <span class="tag">FAO / CAM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="Impression 3D Egouttoir" class="card-img">
+                <div class="card-content">
+                    <h3>Impression 3D : Égouttoir</h3>
+                    <p>Conception CAO d'un égouttoir à vaisselle et fabrication par impression 3D FDM en PLA, avec analyse de la résistance à l'eau.</p>
+                    <div class="tag-container">
+                        <span class="tag">SolidWorks</span>
+                        <span class="tag">Impression 3D</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3 : EMBARQUÉ & CODE -->
+        <h2 class="section-title">💻 Systèmes Embarqués & Développement</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="" alt="Montage ESP32 RDS" class="card-img">
+                <div class="card-content">
+                    <h3>Système Audio RDS (ESP32)</h3>
+                    <p>Programmation C++ d'un module intégrant un microcontrôleur ESP32, un transmetteur FM SI4713 et un encodeur rotatif pour du streaming Bluetooth A2DP vers un autoradio.</p>
+                    <div class="tag-container">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Électronique</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" alt="App Mon ENIT" class="card-img">
+                <div class="card-content">
+                    <h3>Application "Mon ENIT"</h3>
+                    <p>Développement, compilation et déploiement d'une application multiplateforme d'aide à la gestion académique pour les étudiants de l'école.</p>
+                    <div class="tag-container">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">React Native / Web</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Pablo RIBAU - Élève-ingénieur Génie Mécanique (ENIT)</p>
+    </footer>
+
+</body>
+</html>
